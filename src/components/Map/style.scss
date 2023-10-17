@@ -1,0 +1,35 @@
+@import './../../styles/vars';
+
+.map-container{
+    background-color: $secondary-color;
+    margin: 2rem;
+    width: 50vw;
+    height: 80vh;
+    display: grid;
+
+}
+
+.map{
+    width : 46vw;
+    height: 72vh;
+    place-self: center;
+}
+
+/* Pour le marqueur principal */
+.leaflet-icon {
+    background-image: url(./../../../public/images/marker-icon.png);
+  }
+  
+/* Pour l'ombre du marqueur */
+.leaflet-shadow-icon {
+    background-image: url(./../../../public/images/marker-shadow.png);
+}
+
+.bottle-icon {
+    background-image: url(./../../../public/images/bouteille.png);
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    background-position: center;
+}
+  

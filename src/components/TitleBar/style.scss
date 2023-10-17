@@ -1,0 +1,15 @@
+@import './../../styles/vars';
+
+.titlebar{
+    text-align: center;
+    font-family: serif;
+    font-size: 4rem;
+    margin: 2rem;
+    background-color: $secondary-color;
+    padding: 1rem;
+    color: $third-color;
+    box-shadow: 14px 16px 0px 1px rgba(224,187,59,0.55);
+    -webkit-box-shadow: 14px 16px 0px 1px rgb(202, 171, 58);
+    -moz-box-shadow: 14px 16px 0px 1px rgba(224,187,59,0.55);
+    text-shadow: 1px 1px 2px black;
+}

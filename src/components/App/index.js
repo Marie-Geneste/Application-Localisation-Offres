@@ -1,13 +1,14 @@
 // == Import
-import reactLogo from './react-logo.svg';
+import TitleBar from '../TitleBar';
+import Map from '../Map';
 import './styles.css';
 
 // == Composant
 function App() {
   return (
     <div className="app">
-      <img src={reactLogo} alt="react logo" />
-      <h1>Cool'ici</h1>
+      <TitleBar/>
+      <Map/>
     </div>
   );
 }

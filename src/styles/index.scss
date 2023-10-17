@@ -1,8 +1,11 @@
 @use 'reset';
 @use 'vars';
+@import '_vars';
+
 
 body {
   font-family: sans-serif;
+  background-color: $primary-color;
 }
 
 /* 
