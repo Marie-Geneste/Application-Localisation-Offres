@@ -1,0 +1,9 @@
+@import '../../../styles/vars';
+
+.list-item{
+    background-color: $primary-color;
+    margin: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    color: $secondary-color;
+}

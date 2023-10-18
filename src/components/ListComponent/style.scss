@@ -1,0 +1,17 @@
+@import '../../styles/vars';
+
+.list-container{
+    background-color: $secondary-color;
+    margin: 1rem 2rem 0 2rem;
+    width: 50vw;
+    height: 80vh;
+    padding: 2rem;
+    color: $third-color;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.07rem;
+    font-size: 2rem;
+}
+
+.list-title{
+    margin-bottom: 2rem;
+}

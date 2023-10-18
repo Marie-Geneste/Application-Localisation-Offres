@@ -10,28 +10,29 @@ import 'leaflet/dist/leaflet.css'; // Importez le CSS de Leaflet
 import L from 'leaflet';
 
 
-
-const Map = () => {
+const Map = ({ datas }) => {
 
   const bottleIcon = new L.Icon({
     iconUrl: './images/bouteille.png', // Spécifiez le chemin vers votre image d'icône
-    iconSize: [50, 50], // Spécifiez la taille de l'icône
+    iconSize: [35, 35], // Spécifiez la taille de l'icône
     iconAnchor: [15, 30], // Spécifiez l'ancre de l'icône (position du pointeur)
     popupAnchor: [0, -30], // Spécifiez l'ancre du popup (position par rapport à l'icône)
   });
-
+  
   return (
     <div className='map-container'>
-        <MapContainer className='map' center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
+        <MapContainer className='map' center={[43.295, -0.370]} zoom={13} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]} icon={bottleIcon}>
+            {datas.map((data) => (
+              <Marker key={data.id} position={data.position} icon={bottleIcon}>
                 <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+                 {data.name}
                 </Popup>
-            </Marker>
+              </Marker>
+            ))}
         </MapContainer>
     </div>
   )

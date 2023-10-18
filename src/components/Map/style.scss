@@ -2,7 +2,7 @@
 
 .map-container{
     background-color: $secondary-color;
-    margin: 2rem;
+    margin: 1rem 2rem 0 2rem;
     width: 50vw;
     height: 80vh;
     display: grid;
@@ -10,7 +10,7 @@
 }
 
 .map{
-    width : 46vw;
+    width : 43vw;
     height: 72vh;
     place-self: center;
 }
