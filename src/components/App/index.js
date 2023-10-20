@@ -1,4 +1,5 @@
 // == Import
+import { useState } from 'react';
 import TitleBar from '../TitleBar';
 import Map from '../Map';
 import './styles.css';
@@ -20,13 +21,18 @@ function App() {
     }
   ]
 
+  const [hoveredMarker, setHoveredMarker] = useState(null);
+  console.log("HOVEREDMARKERID", hoveredMarker)
+
+  const [hoveredList, setHoveredList] = useState(null)
+  console.log("HOVEREDLISTID", hoveredList)
 
   return (
     <div className="app">
       <TitleBar/>
       <div className='container'>
-        <Map datas={datas}/>
-        <ListComponent datas={datas}/>
+        <Map datas={datas} setHoveredMarker={setHoveredMarker} hoveredList={hoveredList}/>
+        <ListComponent datas={datas} hoveredMarker={hoveredMarker} setHoveredList={setHoveredList} setHoveredMarker={setHoveredMarker}/>
       </div>
     </div>
   );
