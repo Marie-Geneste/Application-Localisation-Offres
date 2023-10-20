@@ -2,11 +2,13 @@
 
 ## Démarrage
 
+yarn install
 yarn start
 
 ## Explication
 
 Affichage des bars sur la carte et sur la liste. 
+Au survol de la liste, la popup correspondante s'affiche et à l'inverse au survol du marqueur sur la carte, le bar de la liste se colore.
 
 Possibilité de filtrage pour les bars ayant une terrasse : si on coche la case, ça enlève les bars qui n'ont pas de terrasse sur la carte et sur la liste
 
