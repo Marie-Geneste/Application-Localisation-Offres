@@ -2,36 +2,43 @@
     { 
       "id":1, 
       "position":[43.306, -0.420],
-      "name": "La Guinguette des Sardines"
+      "name": "La Guinguette des Sardines",
+      "terrace": true
     },
     { 
       "id":2,
       "position":[43.295, -0.367],
-      "name": "Le Bakara"
+      "name": "Le Bakara",
+      "terrace": false
     },
     { 
       "id":3,
       "position":[43.295, -0.375],
-      "name": "Snug"
+      "name": "Snug",
+      "terrace": true
     },
     { 
       "id":4,
       "position":[43.297, -0.364],
-      "name": "Meltdown Pau"
+      "name": "Meltdown Pau",
+      "terrace": false
     },
     { 
       "id":5,
       "position":[43.304, -0.402],
-      "name": "Europub"
+      "name": "Europub",
+      "terrace": true
     },
     { 
       "id":6,
       "position":[43.295, -0.372],
-      "name": "Le Baracuba"
+      "name": "Le Baracuba",
+      "terrace": false
     },
     { 
       "id":7,
       "position":[43.304, -0.418],
-      "name": "Carte Blanche"
+      "name": "Carte Blanche",
+      "terrace": true
     }
 ]

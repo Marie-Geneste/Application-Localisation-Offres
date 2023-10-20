@@ -4,10 +4,24 @@
     background-color: $primary-color;
     margin: 1rem;
     padding: 1rem;
-    cursor: pointer;
+    cursor: default;
     color: $secondary-color;
+    display: flex;
+    justify-content: space-between;
 }
 
 .hovered{
     background-color: $third-color;
+}
+
+.heart {
+    width: 40px;
+    border: 2px solid rgb(218, 27, 84);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+.favorite{
+    background-color:  rgb(218, 27, 84);
 }

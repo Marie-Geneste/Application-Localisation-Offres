@@ -8,7 +8,7 @@ import 'leaflet/dist/leaflet.css'; // Importez le CSS de Leaflet
 import MarkerComponent from './MarkerComponent';
 
 
-const Map = ({ datas, setHoveredMarker, hoveredList }) => {
+const Map = ({ filteredDatas, setHoveredMarker, hoveredList }) => {
 
   return (
     <div className='map-container'>
@@ -17,7 +17,7 @@ const Map = ({ datas, setHoveredMarker, hoveredList }) => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {datas.map((data) => (
+            {filteredDatas.map((data) => (
               <MarkerComponent key={data.id} {...data} setHoveredMarker={setHoveredMarker} hoveredList={hoveredList}/>
             ))}
         </MapContainer>

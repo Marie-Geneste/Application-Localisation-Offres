@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.scss'
-import { func } from 'prop-types';
+import heart from '/public/images/icone-de-coeur-noir-1.png'
 
-function List({ name, hoveredMarker, id, setHoveredList, setHoveredMarker }) {
+function List({ handleAddFav, favoriteNameRef, name, hoveredMarker, id, setHoveredList, setHoveredMarker }) {
   let classList = '';
   const [isSelected, setSelected] = useState(false)
   
@@ -18,13 +18,23 @@ function List({ name, hoveredMarker, id, setHoveredList, setHoveredMarker }) {
     setSelected(false)
   }
 
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  function toggleFav () {
+    setIsFavorite(!isFavorite);
+    console.log("ID", id)
+    handleAddFav(id, name);
+  }
+
 
   return (
     <div className='list'>
       <div className={classList}
           onMouseEnter={onSelectedList}
-          onMouseLeave={onUnselectedList}>
+          onMouseLeave={onUnselectedList}
+          ref={favoriteNameRef}>
         {name}
+      <img className={`heart ${isFavorite ? 'favorite' : ''}`} src={heart} onClick={toggleFav}/>
       </div> 
     </div>
   )

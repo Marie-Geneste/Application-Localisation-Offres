@@ -1,5 +1,5 @@
 // == Import
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import TitleBar from '../TitleBar';
 import Map from '../Map';
 import './styles.css';
@@ -21,12 +21,18 @@ function App() {
   const [hoveredList, setHoveredList] = useState(null)
   console.log("HOVEREDLISTID", hoveredList)
 
+  const [showOnlyTerraces, setShowOnlyTerraces] = useState(false);
+  const filteredDatas = showOnlyTerraces ? datas.filter(data => data.terrace) : datas;
+
+  
+	const favoriteNameRef = useRef();
+
   return (
     <div className="app">
       <TitleBar/>
       <div className='container'>
-        <Map datas={datas} setHoveredMarker={setHoveredMarker} hoveredList={hoveredList}/>
-        <ListComponent datas={datas} hoveredMarker={hoveredMarker} setHoveredList={setHoveredList} setHoveredMarker={setHoveredMarker}/>
+        <Map filteredDatas={filteredDatas} setHoveredMarker={setHoveredMarker} favoriteNameRef={favoriteNameRef} hoveredList={hoveredList}/>
+        <ListComponent filteredDatas={filteredDatas} showOnlyTerraces={showOnlyTerraces} setShowOnlyTerraces={setShowOnlyTerraces} hoveredMarker={hoveredMarker} setHoveredList={setHoveredList} setHoveredMarker={setHoveredMarker}/>
       </div>
     </div>
   );
